@@ -45,7 +45,7 @@ ollama pull llama3.1
 ollama pull all-minilm
 ```
 
-2. Place your documents in the `data/ai-agents-arxiv-papers` directory. The API will automatically index these documents when started.
+2. Create and populate a directory for your documents, e.g. `data/ai-agents-arxiv-papers`. The API will automatically index these documents when started.
 
 3. Create a `.env.docker` file in the project root with the following variables:
 ```bash

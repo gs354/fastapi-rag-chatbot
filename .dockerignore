@@ -1,0 +1,48 @@
+# Don't copy local virtual environments
+.venv
+env/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Byte-compiled files
+*.so
+
+# Git-related
+.git
+.gitignore
+
+# Editor files
+*.swp
+*.swo
+*.DS_Store
+.idea/
+.vscode/
+
+# Logs and local data
+*.log
+*.sqlite3
+*.db
+*.pid
+*.bak
+
+# Test and coverage artifacts
+.coverage
+.tox/
+htmlcov/
+.pytest_cache/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Don't copy Dockerfile or docker-compose config (optional)
+Dockerfile
+docker-compose*.yml
+
+# Jupyter notebooks (if not needed)
+*.ipynb

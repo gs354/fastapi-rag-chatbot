@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "fastapi-rag-chatbot"
+version = "0.1.0"
+description = "a simple fastapi rag chatbot"
+authors = ["Gareth Smith <garethsmithuk@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_rag_chatbot"}]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+llama-index = ">=0.12.37,<0.13.0"
+fastapi = "==0.110.3"
+llama-index-llms-ollama = ">=0.5.6,<0.6.0"
+llama-index-embeddings-ollama = ">=0.6.0,<0.7.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+llama-index-vector-stores-weaviate = ">=1.3.1,<2.0.0"
+uvicorn = ">=0.34.2,<0.35.0"
+tomli = "^2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+ruff = "^0.11.11"
+pytest-mock = "^3.14.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = ["--import-mode=importlib"]

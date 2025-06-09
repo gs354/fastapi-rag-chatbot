@@ -1,0 +1,26 @@
+[app]
+name = "RAG Chatbot API"
+version = "0.1.0"
+description = "A RAG chatbot API built with FastAPI, LlamaIndex, Ollama, and Weaviate"
+
+[server]
+host = "0.0.0.0"
+port = 8000
+
+[models]
+llm_model = "llama3.1"
+embedding_model = "all-minilm"
+llm_timeout = 240.0  # 4 minutes
+embedding_timeout = 60.0  # 1 minute
+
+[vector_store]
+index_name = "AIAgents"
+text_key = "content"
+by_text = false
+
+[paths]
+data_dir = "data/ai-agents-arxiv-papers"
+log_file = "fastapi_rag_chatbot.log"
+
+[prompt]
+system_prompt = "You are a helpful AI assistant. Use the provided context to answer questions accurately."

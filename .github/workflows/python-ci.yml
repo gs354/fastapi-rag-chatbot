@@ -2,9 +2,9 @@ name: Python CI (Poetry)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "ci-workflow" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "ci-workflow" ]
   workflow_dispatch:
 
 permissions:
